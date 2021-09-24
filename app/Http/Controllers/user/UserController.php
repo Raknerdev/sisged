@@ -171,7 +171,7 @@ class UserController extends Controller
         if ($lim != null) {
             $enviado->fecha_lim = $lim;
         }
-        if ($request->tipo == 'EXTERNA'){
+        if ($request->tipo == 2){
             $enviado->estado = $request->estado;
         }
 
@@ -212,7 +212,7 @@ class UserController extends Controller
         $recibido-> fecha_doc = $request->fecha_doc;
         $recibido-> referencia = $request->referencia;
         $recibido-> remitente = $request->remitente;
-        if ($request->tipo = 'EXTERNA'){
+        if ($request->tipo == 2){
             $recibido-> estado = $request->estado;
         }
         $recibido-> otro = $request->otro;
